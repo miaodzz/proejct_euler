@@ -127,7 +127,7 @@
       <workItem from="1598227046686" duration="676000" />
       <workItem from="1598342702449" duration="1447000" />
       <workItem from="1598427552245" duration="7199000" />
-      <workItem from="1598499513636" duration="894000" />
+      <workItem from="1598499513636" duration="17724000" />
     </task>
     <servers />
   </component>
@@ -149,7 +149,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/projecteuler$2.coverage" NAME="2 Coverage Results" MODIFIED="1598007616789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/projecteuler$21_40.coverage" NAME="21_40 Coverage Results" MODIFIED="1598500131479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/projecteuler$21_40.coverage" NAME="21_40 Coverage Results" MODIFIED="1598528611445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/projecteuler$222.coverage" NAME="222 Coverage Results" MODIFIED="1598227112706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
