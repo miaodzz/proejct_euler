@@ -367,7 +367,7 @@ def problem19():
 
     print(ans)
 #problem19()
-i
+
 def problem20():
     s=1
     for i in range(1,101):

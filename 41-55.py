@@ -201,4 +201,113 @@ def problem50(): #线性筛法
     print(ans)
 
 
-problem50()
+#problem50()
+
+
+def problem51():
+    replace=[]
+    last=[]
+    replacelist=[]
+
+    def dfs(i,n,m):
+        if i==n:
+            if m==0:
+                replacelist.append(replace.copy())
+            return
+        if m>0:
+            replace[i]=1
+            dfs(i+1,n,m-1)
+        replace[i]=0
+        dfs(i+1,n,m)
+
+    for n in range(2,7):# 总位数
+        for m in range(1,n+1):# 替换掉的位数
+            replacelist = []
+            replace=[0 for i in range(n)]
+            dfs(0,n,m)
+            for num in range(int(pow(10,n-m-1)),int(pow(10,n-m))):
+                #print("总位数",n,'替换位数',m,"剩余数字",num)
+                ns=str(num)
+                for replace in replacelist:
+                    #print('替换',replace)
+                    cnt=0
+                    ans=[]
+                    for k in range(10):
+                        s=""
+                        pos = 0
+                        for i in range(n):
+                            if replace[i]:
+                                s+=str(k)
+                            else:
+                                s+=ns[pos]
+                                pos+=1
+
+                        if is_prime(int(s)) and str(int(s))==s: # 素数且开头不是0
+                            cnt+=1
+                            ans.append(s)
+                    if cnt>=8:
+                        print(ans)
+                        last.append(ans)
+    print(last)
+
+# problem51()
+
+def problem52():
+    for i in range(1,10000000):
+        nums=[str(int(i*j)) for j in range(1,7)]
+        cnt_raw=[0 for _ in range(10)]
+        for c in nums[0]:
+            cnt_raw[int(c)]+=1
+        flag=True
+
+        for num in nums[1:]:
+            cnt_new=[0 for _ in range(10)]
+            for c in num:
+                cnt_new[int(c)]+=1
+            if cnt_raw!=cnt_new:
+                flag=False
+                break
+        if flag:
+            print(nums)
+            break
+# problem52()
+
+
+def problem53():
+    fac = [1, 1, 2, 6]
+    for i in range(4, 101):
+        fac.append(fac[i - 1] * i)
+    print(fac)
+    res = []
+    for n in range(1, 101):
+        for r in range(1,101):
+            if fac[n]/fac[n-r]/fac[r]>1000000:
+                res.append((n,r))
+                print(n,r)
+    print(len(res))
+# problem53()
+
+
+
+def problem55():
+    MAX=999999999
+    def dfs(i,cnt):
+        if cnt>50:
+            return MAX
+        next_i=i+int(str(i)[::-1])
+        if str(next_i)==str(next_i)[::-1]:
+            return 1
+        ans = dfs(next_i,cnt+1)
+        if ans==MAX:
+            return MAX
+        return ans+1
+    cnt=0
+    for i in range(1,10000):
+        ans=dfs(i,0)
+        if ans>=MAX:
+            print(i)
+            cnt+=1
+    print(cnt)
+# problem55()
+
+
